@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+}
+
+.slider{
+    width: 100%;
+    min-height: 80vh;
+    aspect-ratio: 16/9;
+    background:#000;
+    position:relative;
+    height: auto;
+}
+
+.slider-background{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter:brightness(50%); /* This will make the image darker */
+}
+
+.slider-content{
+    position: absolute; /* This will make the content to be on top of the image */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* This will center the content */
+    text-align: center;
+}
+
+h1{
+    font-size: 5rem;
+    color: #fff;
+}
+
+h2{
+    font-size: 3rem;
+    margin-bottom: 100px;
+}
+
+p{
+    font-size:1.5rem;
+    line-height:1.5em;
+}
+
+.p1{
+    font-size: 1.5rem;
+    line-height: 1.5em;
+    text-align: justify;
+}
+
+.slider-content p{
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 300;
+}
+
+.section{
+    padding: 100px 0;
+}
+
+.boxed{
+    max-width: 1200px; /* c'est souvent la résolution de l'écran de tous les appareils*/
+    margin-inline:auto;
+    padding: 0 20px;
+}
+
+.flex{
+    display: flex;
+    justify-content: center; /*space-between*/
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.dark{
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('../img/slider2.jpg');
+    background-size: cover;
+    background-position-y: 50%;;
+    color: #FFF;
+}
+
+.w40{
+    width: 40%;
+}
+
+.w60{
+    width: 60%;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.w15{
+    width: 15%;
+}
+
+.w25{
+    width: 25%;
+} 
+
+.w32{
+    width: 32%;
+}
+
+.space-between{
+    justify-content: center; /*space-between;*/
+}
+
+.gap20{
+    gap: 20px;
+}
+
+.wrap{
+    flex-wrap: wrap; /* S'il y a plusieurs éléments sur une ligne, ils vont passer à la ligne suivante */
+}
+
+.skill{
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.skill img{
+    width: 100px;
+    height:100px;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+}
+
+.skill h3{
+    color: #000;
+    margin-top: 10px;   
+}
+
+.realisation{
+    height: auto;
+    aspect-ratio: 1/1;
+    position: relative;
+}
+
+.realisation h3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem; /* ca va permettre de mettre le titre au milieu de l'image */
+    width: max-content;
+    opacity: 0; /* ca va rendre le titre invisible */
+    transition: .4s ease;
+}
+
+.realisation a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #fff;
+}
+
+.realisation img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* ca va permettre de garder les proportions de l'image au lieu de mettre cover pour insérer l'image dans le bloc mais qui s'adapte pas entierement à la dimension*/
+    filter: brightness(100%); /* This will make the image darker */
+    transition: .4s ease;
+    background-color: #fff; /* ca va permettre de mettre une couleur de fond à l'image si elle est petite*/
+}
+
+.realisation:hover img{
+    filter: brightness(60%); /* ca va rendre l'image plus claire quand on passe la souris dessus*/
+}
+
+.realisation:hover h3{
+    opacity: 1; /* ca va rendre le titre plus visible quand on passe la souris dessus*/
+}
+
+.icon{
+    display:block;
+    font-size: 40px !important;
+}
+
+.label{
+    display:block;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
+
+.value{
+    display:block;
+    font-size: 1.2rem;
+}
+
+.contact{
+    border: 2px dashed #fff;
+    border-radius: 15px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .w40, .w60 {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .p1 {
+        font-size: 1rem;
+    }
+}
+
